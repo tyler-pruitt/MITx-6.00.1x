@@ -1,0 +1,88 @@
+Problem 3
+10.0/10.0 points (graded)
+Write a recursive Python function, given a non-negative integer N, to count and return the number of occurrences of the digit 7 in N.
+
+For example:
+count7(717) -> 2
+count7(1237123) -> 1
+count7(8989) -> 0
+Hint: Mod (%) by 10 gives you the rightmost digit (126 % 10 is 6), while doing integer division by 10 removes the rightmost digit (126 // 10 is 12).
+
+This function has to be recursive; you may not use loops! This function takes in one integer and returns one integer.
+
+def count7(N):
+    '''
+    N: a non-negative integer
+    '''
+    # Your code here
+
+Problem 4
+15.0/15.0 points (graded)
+Write a function called getSublists, which takes as parameters a list of integers named L and an integer named n.
+
+assume L is not empty
+assume 0 < n <= len(L)
+This function returns a list of all possible sublists in L of length n without skipping elements in L. The sublists in the returned list should be ordered in the way they appear in L, with those sublists starting from a smaller index being at the front of the list.
+
+Example 1, if L = [10, 4, 6, 8, 3, 4, 5, 7, 7, 2] and n = 4 then your function should return the list [[10, 4, 6, 8], [4, 6, 8, 3], [6, 8, 3, 4], [8, 3, 4, 5], [3, 4, 5, 7], [4, 5, 7, 7], [5, 7, 7, 2]]
+
+Example 2, if L = [1, 1, 1, 1, 4] and n = 2 then your function should return the list [[1, 1], [1, 1], [1, 1], [1, 4]]
+
+
+Your function does not have to be recursive. Do not leave any debugging print statements when you paste your code in the box.
+
+Problem 5
+20.0/20.0 points (graded)
+Write a Python function that returns a list of keys in aDict that map to integer values that are unique (i.e. values appear exactly once in aDict). The list of keys you return should be sorted in increasing order. (If aDict does not contain any unique values, you should return an empty list.)
+
+This function takes in a dictionary and returns a list.
+
+def uniqueValues(aDict):
+    '''
+    aDict: a dictionary
+    '''
+    # Your code here
+
+Implement a function that meets the specifications below.
+
+def max_val(t): 
+    """ t, tuple or list
+        Each element of t is either an int, a tuple, or a list
+        No tuple or list is empty
+        Returns the maximum int in t or (recursively) in an element of t """ 
+    # Your code here
+For example,
+
+max_val((5, (1,2), [[1],[2]])) returns 5.
+max_val((5, (1,2), [[1],[9]])) returns 9.
+Paste your entire function, including the definition, in the box below. Do not leave any debugging print statements.
+
+Write a Python function called satisfiesF that has the specification below. Then make the function call run_satisfiesF(L, satisfiesF). Your code should look like:
+
+def satisfiesF(L):
+    """
+    Assumes L is a list of strings
+    Assume function f is already defined for you and it maps a string to a Boolean
+    Mutates L such that it contains all of the strings, s, originally in L such
+            that f(s) returns True, and no other elements. Remaining elements in L
+            should be in the same order.
+    Returns the length of L after mutation
+    """
+    # Your function implementation here
+
+run_satisfiesF(L, satisfiesF)
+For your own testing of satisfiesF, for example, see the following test function f and test code:
+
+def f(s):
+    return 'a' in s
+      
+L = ['a', 'b', 'a']
+print(satisfiesF(L))
+print(L)
+Should print:
+
+2
+['a', 'a']
+Paste your entire function satisfiesF, including the definition, in the box below. After you define your function, make a function call to run_satisfiesF(L, satisfiesF). Do not define f or run_satisfiesF. Do not leave any debugging print statements.
+
+For this question, you will not be able to see the test cases we run. This problem will test your ability to come up with your own test cases.
